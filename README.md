@@ -1,6 +1,6 @@
-# Concordance & Discordance Calculator
+# Netflow Rank
 
-Create a rank by computing pairwise concordance and discordance matrices.
+Create a netflow rank by computing pairwise concordance and discordance matrices.
 
 ## Features
 
