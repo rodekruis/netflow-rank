@@ -36,7 +36,7 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def setup_logger(logs_dir: str = "logs") -> logging.Logger:
+def get_logger(logs_dir: str = "logs") -> logging.Logger:
     os.makedirs(logs_dir, exist_ok=True)
     log_filename = datetime.now().strftime("%Y-%m-%d_%H-%M-%S.log")
     log_path = os.path.join(logs_dir, log_filename)
@@ -57,7 +57,7 @@ def setup_logger(logs_dir: str = "logs") -> logging.Logger:
 
 if __name__ == "__main__":
     args = get_args()
-    logger = setup_logger(args.logs)
+    logger = get_logger(args.logs)
     logger.info("Execution started.")
     logger.info(f"Input arguments: {args}")
 
